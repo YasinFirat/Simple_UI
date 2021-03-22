@@ -14,6 +14,7 @@ public class DataManager : MonoBehaviour
     public GameObject openGame;
     public LevelData levelData;
     FileDataControl fileDataControl;
+    
     // Start is called before the first frame update
     void Awake()
     {
@@ -42,5 +43,11 @@ public class DataManager : MonoBehaviour
         }
         return fileDataControl;
     }
+
+    public LevelData GetLevel()
+    {
+        return levelData;
+    }
+    
     
 }

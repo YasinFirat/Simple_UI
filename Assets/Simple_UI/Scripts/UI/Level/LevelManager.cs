@@ -6,23 +6,30 @@ using yasinfirat;
 
 public class LevelManager : MonoBehaviour
 {
+    private DataManager dataManager;
     private GridControl gridControl;
-    [HideInInspector]public List<GridItem> levelItem;
+    public List<GridItem> levelItem;
     private int totalLevel;
     public Files data;
     
     private void Awake()
     {
-        DataManager dataManager = FindObjectOfType<DataManager>();
+        dataManager = FindObjectOfType<DataManager>();
         gridControl = transform.GetComponentInChildren<GridControl>();
         
         totalLevel = dataManager.GetDataClass(data).ReadAllData().Count;
+        
         gridControl.CreateGridMember(totalLevel);
         
         for (int i = 0; i < totalLevel; i++)
         {
             levelItem.Add(gridControl.gridMember.GetComponent<GridItem>(i));
         }
+      
+    }
+    private void Start()
+    {
+        CheckGridMembers();
     }
     private void OnEnable()
     {
@@ -31,9 +38,9 @@ public class LevelManager : MonoBehaviour
     public void CheckGridMembers()
     {
         //level yerleştirmesi yapılacak yapılacak.
-        for (int i = 0; i < totalLevel; i++)
+        for (int i = 0; i < totalLevel-1; i++)
         {
-            levelItem[i].SetInformations();
+            levelItem[i].SetInformations(dataManager,i+1);
         }
     }
 }
