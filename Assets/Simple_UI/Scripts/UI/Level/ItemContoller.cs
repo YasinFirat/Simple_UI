@@ -4,28 +4,21 @@ using UnityEngine;
 using yasinfirat;
 
 
-public class LevelManager : MonoBehaviour
+public class ItemContoller : MonoBehaviour
 {
-    private DataManager dataManager;
-    private GridControl gridControl;
+    public GridControl gridControl;
     public List<GridItem> levelItem;
     private int totalLevel;
-    public Files data;
+    public FileDataControl data;
     
     private void Awake()
     {
-        dataManager = FindObjectOfType<DataManager>();
-        gridControl = transform.GetComponentInChildren<GridControl>();
-        
-        totalLevel = dataManager.GetDataClass(data).ReadAllData().Count;
-        
+        //totalLevel = DataManager.Instance.GetDataClass( data).ReadAllData().Count;
         gridControl.CreateGridMember(totalLevel);
-        
         for (int i = 0; i < totalLevel; i++)
         {
             levelItem.Add(gridControl.gridMember.GetComponent<GridItem>(i));
         }
-      
     }
     private void Start()
     {
@@ -40,7 +33,7 @@ public class LevelManager : MonoBehaviour
         //level yerleştirmesi yapılacak yapılacak.
         for (int i = 0; i < totalLevel-1; i++)
         {
-            levelItem[i].SetInformations(dataManager,i+1);
+            levelItem[i].SetInformations(DataManager.Instance,i+1);
         }
     }
 }

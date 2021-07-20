@@ -7,6 +7,6 @@ namespace yasinfirat
         /// Places default data when data is first created
         /// </summary>
         /// <param name="amount">Data amount</param>
-        void CheckDataOnLoad(int amount);
+        void CheckDataOnLoad(DataScriptable dataScriptable);
     }
 }

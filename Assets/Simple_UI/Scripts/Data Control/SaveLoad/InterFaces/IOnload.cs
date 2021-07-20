@@ -1,7 +1,15 @@
 ﻿namespace yasinfirat
 {
+    /// <summary>
+    /// Yüklenme durumunda kontrol işlemi yapar
+    /// </summary>
     public interface IOnload
     {
+        /// <summary>
+        /// Eğer  dosya ilk defa kurulduysa true değerini döndürür.
+        /// </summary>
+        /// <returns></returns>
+        bool FirstCreate();
         /// <summary>
         /// if the folder does not exist, create 
         /// </summary>

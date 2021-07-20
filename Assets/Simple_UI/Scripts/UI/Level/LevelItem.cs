@@ -13,7 +13,7 @@ public class LevelItem : GridItem
     public override void SetInformations(DataManager data, int id)
     {
        
-        levelData = data.GetLevel();
+       // levelData = data.GetLevel();
        
         bool isPassed = levelData.GetPassed(id);
         if (!isPassed)

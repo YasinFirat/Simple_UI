@@ -11,43 +11,52 @@ public enum Files
 }
 public class DataManager : MonoBehaviour
 {
+    public static DataManager Instance;
+    public DataScriptable dataScriptable;
+    public LevelDataScriptable levelDataScriptable;
+    public ShopScriptable shopScriptable;
+    public string dataName="Levels";
     public GameObject openGame;
-    public LevelData levelData;
-    FileDataControl fileDataControl;
+   // LevelData levelData;
+    ShopData shopData;
+   // FileDataControl fileDataControl;
     
     // Start is called before the first frame update
     void Awake()
     {
-        fileDataControl = new FileDataControl();
-        levelData = new LevelData("levels.txt");
+        if (Instance != null)
+        {
+            Destroy(this);
+        }
+        Instance = this;
+    
+        levelDataScriptable.CreateData();
+        shopScriptable.CreateData();
+        
+
+
     }
     private void Start()
     {
-        levelData.CheckDataOnLoad(100);
+     
+        shopScriptable.CheckOnLoad();
+        levelDataScriptable.CheckOnLoad();
+        
+       
         openGame.SetActive(true);
-        DontDestroyOnLoad(gameObject);
-    }
-    public FileDataControl GetDataClass(Files files)
-    {
-        switch (files)
-        {
-            case Files.LevelData:
-                fileDataControl = levelData;
-                break;
-            case Files.ShopData:
-                break;
-            case Files.ScoreData:
-                break;
-            default:
-                break;
-        }
-        return fileDataControl;
+        DontDestroyOnLoad(gameObject);//Sahne geçişlerinde bu objeyi silme
+        
     }
 
-    public LevelData GetLevel()
+   
+    public DataScriptable GetDataClass(DataScriptable dataScriptable)
     {
-        return levelData;
+
+        this.dataScriptable = dataScriptable;
+        return dataScriptable;
     }
+
+  
     
     
 }
