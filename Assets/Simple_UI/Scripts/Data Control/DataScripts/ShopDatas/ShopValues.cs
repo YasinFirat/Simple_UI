@@ -1,5 +1,6 @@
 ﻿using Unity;
 using UnityEngine;
+using UnityEngine.UI;
 /// <summary>
 /// Shop ile ilgili verilerinizi buraya giriniz.(Veri dışında birşey olmasın)
 /// </summary>
@@ -7,6 +8,7 @@ using UnityEngine;
 [System.Serializable]
 public struct ShopValues
 {
+    public int id;
     /// <summary>
     /// Ürünün resmi
     /// </summary>

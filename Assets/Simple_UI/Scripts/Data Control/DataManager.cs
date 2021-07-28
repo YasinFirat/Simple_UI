@@ -3,25 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using yasinfirat;
 
-public enum Files
-{
-    LevelData,
-    ShopData,
-    ScoreData
-}
+/// <summary>
+/// Data'ya hızlı bir biçimde erişim sağlanabilir.
+/// </summary>
 public class DataManager : MonoBehaviour
 {
     public static DataManager Instance;
-    public DataScriptable dataScriptable;
-    public LevelDataScriptable levelDataScriptable;
-    public ShopScriptable shopScriptable;
-    public string dataName="Levels";
-    public GameObject openGame;
-   // LevelData levelData;
-    ShopData shopData;
-   // FileDataControl fileDataControl;
-    
-    // Start is called before the first frame update
+    public ShopDataController shopDataController; 
+    public WalletDataController walletDataController;
+   
+    public GameObject openThisWhenStart;
     void Awake()
     {
         if (Instance != null)
@@ -29,32 +20,22 @@ public class DataManager : MonoBehaviour
             Destroy(this);
         }
         Instance = this;
-    
-        levelDataScriptable.CreateData();
-        shopScriptable.CreateData();
         
-
-
+        shopDataController.CreateData();
+        walletDataController.CreateData();
     }
     private void Start()
     {
-     
-        shopScriptable.CheckOnLoad();
-        levelDataScriptable.CheckOnLoad();
+        shopDataController.CheckOnLoad();
+        walletDataController.CheckOnLoad();
         
-       
-        openGame.SetActive(true);
+        //   openGame.SetActive(true);
         DontDestroyOnLoad(gameObject);//Sahne geçişlerinde bu objeyi silme
         
     }
 
    
-    public DataScriptable GetDataClass(DataScriptable dataScriptable)
-    {
-
-        this.dataScriptable = dataScriptable;
-        return dataScriptable;
-    }
+    
 
   
     

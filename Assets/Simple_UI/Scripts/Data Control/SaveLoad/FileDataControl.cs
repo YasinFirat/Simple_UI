@@ -34,6 +34,7 @@ namespace yasinfirat
         /// <param name="fileName"></param>
         public FileDataControl(string fileName)
         {
+            CheckFolder(SAVE_FOLDER);
             this.fileName = fileName;
             CheckFile(fileName);
         }
@@ -58,7 +59,7 @@ namespace yasinfirat
             {
                 //All data are read in json format in line order.
                 data = (File.ReadAllLines(pathFile)).ToList();
-
+               
                 return data;
             }
             catch (FileNotFoundException)
@@ -79,6 +80,7 @@ namespace yasinfirat
             {
                 //All data are read in json format in line order.
                 data = (File.ReadAllLines(pathFile)).ToList();
+               
                 return data[index];
                 
             }
@@ -120,6 +122,12 @@ namespace yasinfirat
         public  T WriteData<T>(int index)
         {
             return JsonUtility.FromJson<T>(ReadData(index));
+        }
+        public T WriteData<T>(T obj,int index)
+        {
+            obj= JsonUtility.FromJson<T>(ReadData(index));
+            
+            return obj;
         }
         /// <summary>
         /// Veriyi json tipine çevirerek dönüştürür.

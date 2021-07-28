@@ -1,35 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="DataManager" Collapsed="true">
-    <Position X="4.25" Y="4" Width="1.5" />
+    <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgCAAAACABAAAAQAAAAQAQABAAAAAAQAAAAAAAAEA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAgAAAAAAAQgAAAAAAAEA=</HashCode>
       <FileName>Assets\Simple_UI\Scripts\Data Control\DataManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LevelData" Collapsed="true">
-    <Position X="0.5" Y="2.75" Width="1.5" />
+    <Position X="0.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAgAAAAAAAAAAAAAgAAQCIAAAAAAAAAAAAABAAAA=</HashCode>
       <FileName>Assets\Simple_UI\Scripts\Data Control\DataScripts\LevelDatas\LevelData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ShopData" Collapsed="true">
-    <Position X="2.25" Y="2.75" Width="1.5" />
+    <Position X="2.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAABAAAA=</HashCode>
+      <HashCode>AQAABAAAEAAAAAAJEAAAgAAQAAACAAAACIAAQABQBCA=</HashCode>
       <FileName>Assets\Simple_UI\Scripts\Data Control\DataScripts\ShopDatas\ShopData.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LevelDataScriptable" Collapsed="true">
-    <Position X="6.5" Y="1.75" Width="1.5" />
+    <Position X="7.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Simple_UI\Scripts\Data Control\Scriptable\Level\LevelDataScriptable.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="yasinfirat.FileDataControl" Collapsed="true">
-    <Position X="1.25" Y="1.75" Width="1.5" />
+    <Position X="1.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAEIABAAAAAgAAAAAQABAgAAAAAEAQAAIAAAA=</HashCode>
       <FileName>Assets\Simple_UI\Scripts\Data Control\SaveLoad\FileDataControl.cs</FileName>
@@ -53,36 +53,22 @@
   <Class Name="GridControl" Collapsed="true">
     <Position X="10.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAABIAAAAAAAgAAAAQABAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAABIAAAAAAAgAAAAQABAAAAAAAAAA=</HashCode>
       <FileName>Assets\Simple_UI\Scripts\UI\Grid\GridControl.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GridItem" Collapsed="true">
-    <Position X="12" Y="0.5" Width="1.5" />
+    <Position X="12.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Simple_UI\Scripts\UI\Grid\GridItem.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LevelItem" Collapsed="true">
-    <Position X="13.5" Y="2.25" Width="1.5" />
+    <Position X="12.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAASAAEAAAAAAAAAAgEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Simple_UI\Scripts\UI\Level\LevelItem.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LevelManager" Collapsed="true">
-    <Position X="16" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AABAAAAAACAAAAAAAAAAAAACAAAAAAAICAAQAAAACEA=</HashCode>
-      <FileName>Assets\Simple_UI\Scripts\UI\Level\LevelManager.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LockController" Collapsed="true">
-    <Position X="17.75" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAA=</HashCode>
-      <FileName>Assets\Simple_UI\Scripts\UI\Level\LockController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="StarController" Collapsed="true">
@@ -92,47 +78,61 @@
       <FileName>Assets\Simple_UI\Scripts\UI\Level\StarController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DataScriptable&lt;T1, T2&gt;" Collapsed="true">
-    <Position X="5.5" Y="0.5" Width="1.5" />
+  <Class Name="ShopDataController" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQAAAAAAAAAAEAAABAAAAAAAAAAAAAAEAQAAAAQgA=</HashCode>
+      <HashCode>AAAYAAAAAAAAAAEAQEAAAAAAAAAAAAAAAAgQAAAAAAA=</HashCode>
+      <FileName>Assets\Simple_UI\Scripts\Data Control\Scriptable\Shop\ShopDataController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataScriptable" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAEBAAAAAAAAAAAAABEAQAAAAAAA=</HashCode>
       <FileName>Assets\Simple_UI\Scripts\Data Control\Scriptable\DataScriptable.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ShopScriptable" Collapsed="true">
-    <Position X="4.25" Y="1.75" Width="1.5" />
+  <Class Name="ShopProduct" Collapsed="true">
+    <Position X="5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
-      <FileName>Assets\Simple_UI\Scripts\Data Control\Scriptable\Shop\ShopScriptable.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Simple_UI\Scripts\Data Control\Scriptable\Shop\ShopProduct.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Struct Name="DataValues" Collapsed="true">
-    <Position X="6.25" Y="4" Width="1.25" />
+  <Class Name="ItemContoller" Collapsed="true">
+    <Position X="15" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAABAAAAAAAAIAA=</HashCode>
-      <FileName>Assets\Simple_UI\Scripts\Data Control\DataScripts\LevelDatas\DataValues.cs</FileName>
+      <HashCode>AABAAAAAACAAAAAAAAAAQAAQAAAAAAAACAIAAAAACEA=</HashCode>
+      <FileName>Assets\Simple_UI\Scripts\UI\Level\ItemContoller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShopItem" Collapsed="true">
+    <Position X="13.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAQAAAIAAAAAAAAEAAAEAACAAAAIAwAAAAAggA=</HashCode>
+      <FileName>Assets\Simple_UI\Scripts\UI\Shop\ShopItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="ShopValues" Collapsed="true">
+    <Position X="5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAQAAAAAAAAAAAAAAAAEAAEAAAAIAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Simple_UI\Scripts\Data Control\DataScripts\ShopDatas\ShopValues.cs</FileName>
     </TypeIdentifier>
   </Struct>
   <Interface Name="yasinfirat.IJsonData" Collapsed="true">
-    <Position X="0.5" Y="4" Width="1.5" />
+    <Position X="0.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Simple_UI\Scripts\Data Control\SaveLoad\InterFaces\IJsonData.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="yasinfirat.IOnload" Collapsed="true">
-    <Position X="2.25" Y="4" Width="1.5" />
+    <Position X="2" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgBAAAA=</HashCode>
       <FileName>Assets\Simple_UI\Scripts\Data Control\SaveLoad\InterFaces\IOnload.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="Files" Collapsed="true">
-    <Position X="0.5" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAABAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Simple_UI\Scripts\Data Control\DataManager.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

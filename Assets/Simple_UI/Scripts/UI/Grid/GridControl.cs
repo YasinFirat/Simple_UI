@@ -2,13 +2,21 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Grid üyelerini oluşturur ve kolay ulaşılması için bunları listede tutar.
+/// </summary>
 [System.Serializable]
 public class GridMember 
 {
+    [Tooltip("Kopyasının oluşmasını istediğiniz objeyi sürükleyin.")]
     public GameObject obj;
+    [Tooltip("Tüm grid listesi ve burada istediğiniz grid'e gameObject olarak ulaşabilirsiniz")]
     public List<GameObject> members;
     public int total;
-
+    /// <summary>
+    /// Grid oluşturur.
+    /// </summary>
+    /// <param name="parent">İstenilen grid'in parent objesi</param>
     public void CreateGridMember(Transform parent)
     {
         members.Add(obj);
@@ -21,20 +29,39 @@ public class GridMember
     {
         return members[index];
     }
+    /// <summary>
+    /// index numarasına göre nesne'nin componenti alınır.
+    /// (dizi gameObject olduğundan dolayı index numarasına göre component get etmek durumunda kaldım.)
+    /// </summary>
+    /// <typeparam name="T">Component türü</typeparam>
+    /// <param name="index">Grid'in index numarası</param>
+    /// <returns></returns>
     public T GetComponent<T>(int index)
     {
         return members[index].GetComponent<T>();
     }
+    /// <summary>
+    /// Kaç adet grid üyesi olduğunu gösterir.
+    /// </summary>
+    /// <returns></returns>
     public int GetTotal()
     {
         return total;
     }
+    /// <summary>
+    /// Oluşturulması istenen grid sayısı girilir
+    /// </summary>
+    /// <param name="total"></param>
+    /// <returns></returns>
     public GridMember SetTotal(int total)
     {
         this.total = total;
         return this; 
     }
 }
+/// <summary>
+/// Grid'lerin hesaplama ve yerleşim işlemini bizzat bu sınıf yapar.
+/// </summary>
 public class GridControl : MonoBehaviour
 {
     public GridLayoutGroup gridLayoutGroup;
@@ -42,13 +69,12 @@ public class GridControl : MonoBehaviour
     
     public GridMember gridMember;
 
-    private void Start()
-    {
-      
-       
-    }
+   /// <summary>
+   /// Canvas üzerindeki gridin boyutu hesaplanır ve boyutu oluşturulur.
+   /// 
+   /// </summary>
     private void CalculateGridHeight()
-    {
+    {//Metod içindeki aşamalar daha sonra yazılacak.
         RectTransform recTransform;
         float distanceOfRow,heightThisRect;
         int column, row;
@@ -69,7 +95,11 @@ public class GridControl : MonoBehaviour
         recScale.y = heightThisRect;
         recTransform.sizeDelta = recScale;
     }
-
+    /// <summary>
+    /// Grid oluşturulur ve yerleşim hesaplamaları yapılır.
+    /// </summary>
+    /// <param name="total">Toplam boyutu</param>
+    /// <returns></returns>
     public GridControl CreateGridMember(int total)
     {
         gridMember.SetTotal(total).CreateGridMember(transform);

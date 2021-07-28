@@ -8,11 +8,12 @@ using UnityEngine;
 /// <typeparam name="T1">Mümkünse FileDataControl'den türeyen bir sınıf ekleyin</typeparam>
 /// <typeparam name="T2">Data değişkenlerini tutan sınıf</typeparam>
 
-public class DataScriptable : RootDataScriptable<object, object>
+public class DataScriptable : ScriptableObject
 {
-    public int length;
+    protected int _length;
     public string fileName;
-
+    
+   
     /// <summary>
     /// .txt uzantılı olarak dosya adı alınır
     /// </summary>
@@ -24,19 +25,32 @@ public class DataScriptable : RootDataScriptable<object, object>
         }
 
     }
-
+    
     /// <summary>
     /// Oyun Cihazda ilk defa çalıştırıyorsa default verileri aktarır.
     /// </summary>
-    public void CheckOnLoad()
+    public virtual void CheckOnLoad()
     {
-
+#if UNITY_EDITOR
+        Debug.Log("Datalar önceden oluşturuldu mu diye kontrol ediliyor.");
+#endif
     }
     /// <summary>
     /// data oluşturur.
     /// </summary>
-    public void CreateData()
+    public virtual void CreateData()
     {
+#if UNITY_EDITOR
+        Debug.Log("Data oluşturuldu");
+#endif
+    }
 
+    public  virtual int length
+    {
+        get
+        {
+            return _length;
+        }
+        set { _length = value; }
     }
 }
